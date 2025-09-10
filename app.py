@@ -213,6 +213,8 @@ class App:
         self.set_status("Model rebuilt successfully.")
 
 
+    
+
 if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)
