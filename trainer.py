@@ -112,21 +112,3 @@ def rebuild_model(det_size=(640, 640), ctx_id=0) -> Dict:
     save_centroids(centroids, meta)
     return {"classes": list(centroids.keys()), "meta": meta}
 
-def delete_person(name: str) -> bool:
-    """Delete a person's folder from dataset/. Returns True if deleted, False if not found."""
-    pdir = os.path.join(DATASET_DIR, name)
-    if not os.path.exists(pdir) or not os.path.isdir(pdir):
-        return False
-    # Remove all files in the directory
-    files = _list_images(pdir)
-    for f in files:
-        try:
-            os.remove(f)
-        except Exception:
-            pass
-    # Remove the directory itself
-    try:
-        os.rmdir(pdir)
-    except Exception:
-        pass
-    return True
