@@ -10,7 +10,7 @@ import numpy as np
 from face_engine import FaceEngine
 
 MODELS_DIR = os.path.join(os.path.dirname(__file__), 'models')
-DATASET_DIR = os.path.join(os.path.dirname(__file__), 'dataset mask')
+DATASET_DIR = os.path.join(os.path.dirname(__file__), 'dataset caps')
 CENTROIDS_PATH = os.path.join(MODELS_DIR, 'centroids.npz')
 META_PATH = os.path.join(MODELS_DIR, 'meta.json')
 
